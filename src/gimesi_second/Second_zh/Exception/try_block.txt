@@ -1,0 +1,20 @@
+try 
+{  
+    // Megkísérelünk végrehajtani olyan utasításokat,
+    // amelyek kivételt okozhatnak. 
+} 
+catch(Exception error) 
+{ 
+    // Ha kivétel történik, a program ide ugrik, 
+    // itt megadhatjuk, hogy hiba esetén mi történjen. 
+    // lehet többszörös, ekkor az általános hibakezelőt a végére kell tenni. 
+} 
+finally 
+{  
+    // Nem kötelező megadni. 
+    // Erre az ágra mindkét esetben (try, catch) átadódik a vezérlés. 
+    // Ide kerülnek azok az utasítások, amelyeket mindenképpen végre 
+    // kell hajtani (pl. fájllezárás). 
+    // Mivel itt is lehet olyan művelet (pl. fájllezárás), ami szintén kivételt 
+    // eredményezhet, ezt is illik try-catch szerkezettel lekezelni. 
+} 
