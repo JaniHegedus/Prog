@@ -12,7 +12,10 @@ public class F3_Exception
         System.out.println(ertek);
     }
 }
-
+class HibásÉrték0 extends Exception
+{
+    //Gec ez üres
+}
 /*
 Készítsen programot, amely kiszámítja egy szám négyzetgyökét (Math.sqrt()).
 Írjon ki hibaüzenetet, ha a gyökvonás eredménytelen (pl. negatív számot adtunk meg) alkalmazza a Double.isNaN() metódust.
