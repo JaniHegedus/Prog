@@ -10,14 +10,11 @@ public class F2_Exception
 {
     public static void main(String[] args) throws InputMismatchException
     {
-        int val1 = 1329898989;
-        int val2 = 1932789054;
-        System.out.println("Value1: "+val1);
-        System.out.println("Value2: "+val2);
-        long sum = (long)val1 + (long)val2;
-        if (sum > Integer.MAX_VALUE)
+        try
         {
-            throw new ArithmeticException("Overflow!");
+            Scanner bill = new Scanner(System.in);
+            int input = bill.nextInt();
+            out.println(input);
         }
         catch (InputMismatchException e)
         {

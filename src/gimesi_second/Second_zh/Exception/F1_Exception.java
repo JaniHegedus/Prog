@@ -1,40 +1,38 @@
 package gimesi_second.Second_zh.Exception;
 
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.lang.Math;
-import static java.lang.System.out;
+
 import static java.lang.System.err;
-import java.lang.ClassNotFoundException;
+import static java.lang.System.out;
 
 public class F1_Exception
 {
     public static void main(String[] args)
     {
-        ArrayList<Double> arrayList = new ArrayList<>();
+        ArrayList<Integer> array = new ArrayList<>();
         Scanner be = new Scanner(System.in);
-        int tetszoleges;
-        out.println("Hány elemet akarsz?");
-        tetszoleges = be.nextInt();
-        for(int i = 0; i < tetszoleges; i++)
+        for(int i = 0; i < 10; i++)
         {
-            arrayList.set(i, Math.random());
+            array.add(i);
         }
         try
         {
-            int szam;
-            out.println("hányadik számot keresed (index)");
-            szam = be.nextInt();
-            out.println(arrayList.get(szam));
-        }
-        catch(ClassNotFoundException e)
+        System.out.println("ADD AZ INDEXET");
+        int index = be.nextInt();
+        if(array.get(index)> array.size()) throw new IndexOutOfBoundsException();
+        else
         {
-            out.println("A keresett elem nincs benne a listában.");
+            System.out.println(index);
+        }
+        }
+        catch(IndexOutOfBoundsException error){
+            err.println("NEMJÓBAZEG");
         }
         finally
         {
-            out.println(arrayList);
+            out.println("Ez a finally rész");
         }
     }
 }
