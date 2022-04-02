@@ -8,7 +8,8 @@ public class File_Line_IO
 {
     public static void main(String[] args) 
     {
-        String nev; Scanner billentyu = new Scanner (System.in, "ISO8859_2");
+        String nev;
+        Scanner billentyu = new Scanner (System.in, "ISO8859_2");
         try
         {
             try (PrintStream file = new PrintStream("Fájl.txt")) 
@@ -38,6 +39,5 @@ public class File_Line_IO
         {
         System.err.println("Hiba: " + error.getMessage()); 
         } 
-    
-}
+    }
 }
