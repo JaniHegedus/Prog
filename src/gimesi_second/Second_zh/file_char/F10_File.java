@@ -2,7 +2,9 @@ package gimesi_second.Second_zh.file_char;
 
 public class F10_File
 {
+    public static void main(String[] args) {
 
+    }
 }
 /*
 Készítsen programot, amely a main-ben, ciklus segítségével bekéri téglatestek három méretét.
