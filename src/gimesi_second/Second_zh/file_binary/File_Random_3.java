@@ -4,7 +4,7 @@ import java.io.RandomAccessFile;
 import static java.lang.System.err;
 import static java.lang.System.out;
 import java.util.Scanner;
-public class File_Random_4 
+public class File_Random_3
 { 
     public static void main(String[] args) 
     { 

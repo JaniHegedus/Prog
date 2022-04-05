@@ -12,22 +12,31 @@ public class File_Random_2
         try
         {
             file = new RandomAccessFile("Teszt.txt", "rw");
-            for(char c = 'A'; c <= 'Z'; c++) file.write(c);
-            file.seek(0); //Vissza a fájl elejére 
-            while((kód=file.read())!= -1)out.print((char) kód + " ");
-            out.println();
+            for(char c = 'A'; c <= 'Z'; c++)
+            {
+                file.write(c);
+            }
+            file.seek(0); //Vissza a fájl elejére
+
+            while((kód=file.read())!= -1)
+            {
+                out.print((char) kód + " ");
+            }
+
+            out.println();//Üressor
+
             long poz = 2;
             while (poz < file.length())
-            { 
+            {
                 file.seek(poz);
                 kód = file.read();
                 file.seek(file.getFilePointer()-1);
                 file.write(kód + 32);
-                poz += 3; 
-            } 
+                poz += 3;
+            }
             file.seek(0);
             while((kód=file.read())!= -1)out.print((char) kód + " ");
-            out.println(); 
+            out.println();
             file.close();
         } 
         catch (IOException error)

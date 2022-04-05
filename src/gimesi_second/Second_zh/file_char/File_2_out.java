@@ -21,7 +21,8 @@ class file
     private static String sor;
     public static void kiír(Scanner bill, PrintWriter out)throws IOException
     {
-        try (out) {
+        try (out)
+        {
             int i;
             System.out.print("kérek egy azonosítót: ");
             i=bill.nextInt(); 

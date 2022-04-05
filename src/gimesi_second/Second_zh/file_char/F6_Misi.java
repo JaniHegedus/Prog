@@ -5,52 +5,39 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import static java.lang.System.*;
-import static java.lang.System.in;
-
-public class F6_File
+public class F6_Misi
 {
-    //RÁKOS SZAR EZ A KARAKTEROLVASÁS
-
-    public static void main(String[] args) throws FileNotFoundException
-    {
+    public static void main(String[] args) throws FileNotFoundException {
         String sor;
         try
         {
             BufferedReader file = new BufferedReader(new FileReader("adatok.txt"));
-            int j=1;
-            while ((sor = file.readLine())!= null)
+            while((sor=file.readLine()) != null)
             {
-                out.println(j + ". " + counter(sor));
-                j++;
+                System.out.println("Szoköz " + szokoz(sor));
             }
-
+            file.close();
         }
+
         catch (FileNotFoundException e)
         {
-            err.println("Anyád");
+            e.printStackTrace();
         }
         catch (IOException e)
         {
-            err.println("gec ez üres");
-        }
-        finally
-        {
-            out.println("ilyen is van");
+            e.printStackTrace();
         }
     }
-    public static int counter(String sor)
-    {
-        int szumma = 0;
+    public static int szokoz(String sor){
+        int space = 0;
 
-        for (int j = 0; j < sor.length(); j++)
-        {
-            if (sor.charAt(j)== 32)
-            {
-                szumma++;
+        for (int i = 0;i<sor.length();i++){
+            if (sor.charAt(i) == 32){
+                space++;
             }
         }
-        return szumma;
+
+        return space;
     }
 }
 /*

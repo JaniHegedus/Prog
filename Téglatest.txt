@@ -1,0 +1,4 @@
+Az a oldal hossza: 4.0
+A b oldal hossza: 5.0
+A c oldal hossza: 6.0
+A téglatest térfogata: 120.0
