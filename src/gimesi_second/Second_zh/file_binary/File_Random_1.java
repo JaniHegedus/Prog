@@ -47,4 +47,20 @@ public class File_Random_1
             err.println("Fájl hiba - " + error.getMessage());
         }
     } 
-} 
+}
+/*
+*     FileReader fr=new FileReader("valami.txt");
+        BufferedReader br=new BufferedReader(fr);
+        String s;
+
+        List<String> tmp = new ArrayList<String>();
+        do{
+        s = br.readLine();
+        tmp.add(s);
+        }while(s!=null);
+
+
+        for(int i=tmp.size()-1;i>=0;i--) {
+        System.out.println(tmp.get(i));
+        }
+* */
