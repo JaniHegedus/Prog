@@ -1,8 +1,15 @@
 package gimesi_second.Second_zh.file_char;
 
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+import static java.lang.System.out;
+
 public class F10_File
 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         PrintWriter file = new PrintWriter("Téglatest.txt");
 
