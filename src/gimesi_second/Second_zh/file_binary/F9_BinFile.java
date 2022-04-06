@@ -1,10 +1,47 @@
 package gimesi_second.Second_zh.file_binary;
 
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.util.Scanner;
+
+import static java.lang.System.err;
+
 public class F9_BinFile
 {
     public static void main(String[] args)
     {
+        try{
+            RandomAccessFile file = new RandomAccessFile("Adatok.txt","rw");
+            Scanner beker = new Scanner(System.in);
+            System.out.println("Adja meg a szöveget!");
+            String sor = beker.nextLine();
+            int hossz = 0;
+            while(sor.length()!=0){
+                for (int i = 0;i<sor.length();i++){
+                    hossz++;
+                }
+                kiir(file,sor,hossz);
+                System.out.println("Adja meg a szöveget!");
+                sor = beker.nextLine();
+                hossz = 0;
+            }
 
+            System.out.println("A fájl hossza: " + file.length());
+            file.close();
+        } catch (IOException e)
+        {
+            err.println("Hiba!");
+        }
+    }
+
+    public static void kiir(RandomAccessFile file, String sor, int hossz)
+    {
+        try{
+
+            file.writeBytes(sor + ": " + hossz + '\n');
+        } catch (IOException e){
+            err.println("Írási hiba!");
+        }
     }
 }
 /*

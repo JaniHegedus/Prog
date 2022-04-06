@@ -1,46 +1,71 @@
 package gimesi_second.Second_zh.file_binary;
 
-import java.io.DataOutputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.*;
 import java.util.Scanner;
+
+import static java.lang.System.err;
 import static java.lang.System.out;
 
 public class F5_BinFile
 {
     public static void main(String[] args) throws FileNotFoundException
     {
-        /*
-        Scanner be = new Scanner(System.in);
-        boolean dik = true;
-        int sorszam = 1;
-        while(dik)
-        {
-            out.println("Kérem egy sort:");
-            String sor = be.nextLine();
-            if(sor == "")
-            {
-                dik = false;
+        Scanner beker = new Scanner(System.in);
+        int index = 1;
+        String sor ="";
+        try{
+            FileOutputStream file = new FileOutputStream("Adatok.bin");
+            ObjectOutputStream data = new ObjectOutputStream(file);
+            System.out.println("Adja meg a sort");
+            sor = beker.nextLine();
+            while (sor.length()!=0){
+                kiir(data,sor,index);
+                index++;
+                System.out.println("Adja meg a sort");
+                sor = beker.nextLine();
             }
-            else
-            {
-                kiir(sor, sorszam);
-                sorszam++;
-                out.println("kérem a sort");
-                sor = be.nextLine();
-            }
+            data.close();
+        }catch (IOException e){
+            err.println("Hiba");
         }
-        */
+        try{
+            FileInputStream file = new FileInputStream("Adatok.bin");
+            ObjectInputStream data = new ObjectInputStream(file);
+            boolean bol = true;
+            while (bol){
+                try{
+                    Ob o = (Ob)data.readObject() ;
+                    System.out.println(o.index + ": " + o.sor);
+                }
+                catch (EOFException e)
+                {
+                    bol = false;
+                }
+                catch (ClassNotFoundException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }catch (IOException e){
+            err.println("Hiba!");
+        }
     }
-    /*
-    public static void kiir(String sor, int sorszam)
-    {
-        String filename = "F5_BinFile.java";
-        FileOutputStream bbe = new FileOutputStream(filename);
-        DataOutputStream be = new DataOutputStream(bbe);
+    public static void kiir(ObjectOutputStream file,String sor, int index){
+        Ob object = new Ob();
+        object.sor = sor;
+        object.index = index;
+        try {
+            file.writeObject(object);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-    */
 }
+class Ob implements Serializable {
+    public Integer index;
+    public String sor;
+}
+
 /*
 Készítsen programot, amelyben a main metódus – üres sztring végjelig – sorokat olvas be a  billentyűzetről,
  majd  egy  metódus  segítségével  kiírja  azokat  sorszámmal  ellátva  egy bináris  állományba

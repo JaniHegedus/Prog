@@ -1,10 +1,47 @@
 package gimesi_second.Second_zh.file_binary;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+
+import static java.lang.System.err;
+
 public class F8_BinFile
 {
     public static void main(String[] args)
     {
+        String sor;
+        int index = 1;
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader("D:\\Gimes\\Fajlkezeles_binaris\\F8\\src\\F8\\Main.java"));
+            RandomAccessFile file = new RandomAccessFile("Adatok.txt","rw");
+            while ((sor = reader.readLine())!=null){
+                file.writeBytes(index +". sor: " + Integer.toString(karakterek(sor))+ '\n');
+            }
 
+        }catch (IOException e){
+        }
+
+        try{
+            String sor2;
+            BufferedReader read = new BufferedReader(new FileReader("Adatok.txt"));
+            while((sor2=read.readLine())!=null){
+                System.out.println(sor2);
+            }
+        }catch (IOException er) {
+            err.println("Olvasási Hiba!");
+        }
+    }
+
+    public static int karakterek(String sor){
+        int character_num = 0;
+        for (int i = 0; i<sor.length();i++){
+            if(sor.charAt(i)>=32 && sor.charAt(i)<=127){
+                character_num++;
+            }
+        }
+        return character_num;
     }
 }
 /*
