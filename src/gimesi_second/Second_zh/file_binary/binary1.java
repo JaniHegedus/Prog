@@ -12,8 +12,8 @@ public class binary1
 {
     public static void main(String[] args) throws IOException
     {
-        PrintWriter ki = new PrintWriter("adatok.txt");
-        beolvas(ki); BufferedReader be = new BufferedReader(new FileReader("adatok.txt"));
+        PrintWriter ki = new PrintWriter("Generated/adatok.txt");
+        beolvas(ki); BufferedReader be = new BufferedReader(new FileReader("Generated/adatok.txt"));
         out.printf("Az átlag= %5.2f\n", kiir(be));
     } private static void beolvas(PrintWriter ki) 
     {

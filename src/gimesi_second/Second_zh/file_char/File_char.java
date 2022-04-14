@@ -11,7 +11,7 @@ public class File_char
         String szoveg = "Kipróbáljuk az ékezetes betűket: \nÁáÉéÍíÓóÖöŐőÚúÜüŰű\n";
     try
     { 
-        try (FileWriter ki = new FileWriter("fájl.txt")) 
+        try (FileWriter ki = new FileWriter("Generated/fájl.txt"))
         { //Fájl megnyitás) 
             int i = 0; while(i < szoveg.length()) 
             { 
@@ -28,7 +28,7 @@ public class File_char
     } 
     try 
     { 
-        try (FileReader be = new FileReader("fájl.txt"))
+        try (FileReader be = new FileReader("Generated/fájl.txt"))
         {   // Fájl megnyitás 
         int c;
         while ((c = be.read()) != -1) 

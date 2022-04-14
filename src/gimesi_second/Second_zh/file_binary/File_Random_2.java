@@ -11,7 +11,7 @@ public class File_Random_2
         RandomAccessFile file = null;
         try
         {
-            file = new RandomAccessFile("Teszt.txt", "rw");
+            file = new RandomAccessFile("Generated/Teszt.txt", "rw");
             for(char c = 'A'; c <= 'Z'; c++)
             {
                 file.write(c);

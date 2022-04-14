@@ -10,7 +10,7 @@ public class F7_BinFile
     public static void main(String[] args)
     {
         try{
-            FileOutputStream file = new FileOutputStream("Adatok.bin");
+            FileOutputStream file = new FileOutputStream("Generated/Adatok.bin");
             DataOutputStream data = new DataOutputStream(file);
             Scanner beker = new Scanner(System.in);
             System.out.println("Add meg a számot");
@@ -34,7 +34,7 @@ public class F7_BinFile
         double index = 0;
         boolean bol = true;
         try{
-            FileInputStream file = new FileInputStream("Adatok.bin");
+            FileInputStream file = new FileInputStream("Generated/Adatok.bin");
             DataInputStream data = new DataInputStream(file);
 
             while (bol){

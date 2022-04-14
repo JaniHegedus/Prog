@@ -12,7 +12,7 @@ public class F4_File
 {
     public static void main(String[] args)
     {
-        File file = new File("tartalom.txt");
+        File file = new File("Generated/tartalom.txt");
 
         Scanner bill = new Scanner(System.in);
         ArrayList<String> strings = new ArrayList<>();

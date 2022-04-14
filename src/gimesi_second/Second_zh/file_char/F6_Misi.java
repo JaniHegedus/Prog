@@ -11,7 +11,7 @@ public class F6_Misi
         String sor;
         try
         {
-            BufferedReader file = new BufferedReader(new FileReader("adatok.txt"));
+            BufferedReader file = new BufferedReader(new FileReader("Generated/adatok.txt"));
             while((sor=file.readLine()) != null)
             {
                 System.out.println("Szoköz " + szokoz(sor));

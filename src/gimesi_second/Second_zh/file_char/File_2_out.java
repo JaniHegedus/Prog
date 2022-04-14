@@ -9,9 +9,9 @@ public class File_2_out
     public static void main(String[] args)throws IOException 
     { 
         Scanner billentyu = new Scanner (System.in, "ISO8859_2");
-        PrintWriter out = new PrintWriter("c:\\a\\text.txt"); 
+        PrintWriter out = new PrintWriter("Generated/text.txt");
         file.kiír(billentyu, out);
-        BufferedReader in = new BufferedReader(new FileReader("c:\\a\\text.txt"));
+        BufferedReader in = new BufferedReader(new FileReader("Generated/text.txt"));
         file.olvas(in); 
     } 
 } 

@@ -10,7 +10,7 @@ public class F3_BinFile
 {
     public static void main(String[] args) throws FileNotFoundException
     {
-        String filename="F3.txt";
+        String filename="Generated/F3.txt";
         RandomAccessFile file = null;
         try
         {

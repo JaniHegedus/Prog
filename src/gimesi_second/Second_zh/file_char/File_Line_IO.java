@@ -12,7 +12,7 @@ public class File_Line_IO
         Scanner billentyu = new Scanner (System.in, "ISO8859_2");
         try
         {
-            try (PrintStream file = new PrintStream("Fájl.txt")) 
+            try (PrintStream file = new PrintStream("Generated/Fájl.txt"))
             {
                 out.print("Kérek egy nevet: ");
                 nev = billentyu.nextLine();
@@ -28,7 +28,7 @@ public class File_Line_IO
         {
             System.err.println("Hiba: " + error.getMessage());
         }
-        try (Scanner file = new Scanner(new File("Fájl.txt"))) 
+        try (Scanner file = new Scanner(new File("Generated/Fájl.txt")))
         { 
             while(file.hasNext()) 
             { // Van még adat? 

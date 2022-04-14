@@ -17,7 +17,7 @@ public class F6_File
         String sor;
         try
         {
-            BufferedReader file = new BufferedReader(new FileReader("adatok.txt"));
+            BufferedReader file = new BufferedReader(new FileReader("Generated/adatok.txt"));
             int j=1;
             while ((sor = file.readLine())!= null)
             {

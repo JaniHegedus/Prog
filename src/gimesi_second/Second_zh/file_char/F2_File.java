@@ -9,7 +9,7 @@ public class F2_File
 {
     public static void main(String[] args) throws FileNotFoundException
     {
-        File file = new File("filename.txt");
+        File file = new File("Generated/filename.txt");
         out.printf("Sorok száma: %d\n",fileLinesSum(file));
     }
 

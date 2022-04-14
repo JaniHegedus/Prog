@@ -53,7 +53,7 @@ class Kiír extends JFrame
         int sorok=0;
         StringTokenizer token;
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        try (Scanner file = new Scanner(new File("Fájl.txt")))
+        try (Scanner file = new Scanner(new File("Generated/Fájl.txt")))
         {
             while(file.hasNext())
             {

@@ -8,7 +8,7 @@ import static java.lang.System.out;
 public class F7_Misi
 {
     public static void main(String[] args) throws IOException {
-        PrintWriter file = new PrintWriter("fajl.txt");
+        PrintWriter file = new PrintWriter("Generated/fajl.txt");
         System.out.println("Adja meg a számot!");
         Scanner beker = new Scanner(System.in);
         double num = beker.nextDouble();
@@ -19,7 +19,7 @@ public class F7_Misi
         }
         file.close();
 
-        BufferedReader file2 = new BufferedReader(new FileReader("fajl.txt"));
+        BufferedReader file2 = new BufferedReader(new FileReader("Generated/fajl.txt"));
         out.println("Az átlag: " + atlag(file2));
 
     }

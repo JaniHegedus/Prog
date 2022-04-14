@@ -11,7 +11,7 @@ public class File_Random_1
         long j;
         try
         {
-            try (RandomAccessFile file = new RandomAccessFile("Teszt.txt", "rw"))
+            try (RandomAccessFile file = new RandomAccessFile("Generated/Teszt.txt", "rw"))
             {
                 for(int i = 48; i <= 57; i++) file.write(i);
                 file.seek(5);

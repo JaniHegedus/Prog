@@ -11,7 +11,7 @@ public class F10_File
 {
     public static void main(String[] args) throws IOException {
 
-        PrintWriter file = new PrintWriter("Téglatest.txt");
+        PrintWriter file = new PrintWriter("Generated/Téglatest.txt");
 
         double a = 1, b = 1, c = 1;
         Scanner in = new Scanner(System.in);

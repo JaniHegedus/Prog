@@ -12,7 +12,7 @@ public class File_1_out
         int i; String nev; String sor;
         try
         {
-            try (PrintWriter out = new PrintWriter("c:text.txt")) {
+            try (PrintWriter out = new PrintWriter("Generated/text.txt")) {
                 System.out.print("kérek egy azonosítót: ");
                 i=billentyu.nextInt(); 
                 while (i != 0)
@@ -30,7 +30,7 @@ public class File_1_out
         }
         try 
         {
-            try (BufferedReader in = new BufferedReader(new FileReader("c:text.txt"))) {
+            try (BufferedReader in = new BufferedReader(new FileReader("Generated/text.txt"))) {
                 while ((sor = in.readLine()) != null)
                 {
                     System.out.println(sor); 

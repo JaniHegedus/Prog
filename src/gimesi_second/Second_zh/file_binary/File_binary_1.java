@@ -10,7 +10,7 @@ public class File_binary_1
     {
         try
         {
-            try (FileOutputStream out = new FileOutputStream("Teszt.bin")) {
+            try (FileOutputStream out = new FileOutputStream("Generated/Teszt.bin")) {
                 for(int i = 48; i <= 57; i++) out.write(i);
             }
         }
@@ -20,7 +20,7 @@ public class File_binary_1
         } 
         try 
         {
-            try (FileReader in = new FileReader("Teszt.bin")) {
+            try (FileReader in = new FileReader("Generated/Teszt.bin")) {
                 int c;
                 while ((c = in.read()) != -1)
                 {

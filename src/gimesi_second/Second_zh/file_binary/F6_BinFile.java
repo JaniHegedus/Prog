@@ -9,7 +9,7 @@ public class F6_BinFile
     {
         elsomethod();
         try {
-            FileInputStream bee = new FileInputStream("Adatok.bin");
+            FileInputStream bee = new FileInputStream("Generated/Adatok.bin");
             DataInputStream be = new DataInputStream(bee);
             boolean noteof = true;
             while (noteof){
@@ -37,7 +37,7 @@ public class F6_BinFile
     public static void elsomethod(){
 
         try {
-            FileOutputStream kii = new FileOutputStream("Adatok.bin");
+            FileOutputStream kii = new FileOutputStream("Generated/Adatok.bin");
             DataOutputStream ki = new DataOutputStream(kii);
             String sor;
             Scanner be = new Scanner(System.in);

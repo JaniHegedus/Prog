@@ -6,7 +6,7 @@ public class File_Line
 { 
     public static void main(String[] args) 
     {
-        try (Scanner out = new Scanner(new File("Fájl.txt"))) 
+        try (Scanner out = new Scanner(new File("Generated/Fájl.txt")))
         {
             while(out.hasNext()) 
             { // Van még adat?

@@ -18,7 +18,7 @@ public class File_binary_object
         OB_def OB = new OB_def(); 
         try
         { 
-            FileOutputStream fileOut = new FileOutputStream(new File("Teszt.bin"));
+            FileOutputStream fileOut = new FileOutputStream(new File("Generated/Teszt.bin"));
             ObjectOutputStream file = new ObjectOutputStream(fileOut);
             out.printf("Kérem az azonosítót: ");
             OB.azon = bill.nextInt();
@@ -44,7 +44,7 @@ public class File_binary_object
         } 
         try
         {
-            FileInputStream fileIn = new FileInputStream("Teszt.bin");
+            FileInputStream fileIn = new FileInputStream("Generated/Teszt.bin");
             ObjectInputStream file = new ObjectInputStream(fileIn);
             boolean noteof = true;
             while (noteof)

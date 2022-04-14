@@ -14,8 +14,8 @@ public class F8_BinFile
         String sor;
         int index = 1;
         try{
-            BufferedReader reader = new BufferedReader(new FileReader("D:\\Gimes\\Fajlkezeles_binaris\\F8\\src\\F8\\Main.java"));
-            RandomAccessFile file = new RandomAccessFile("Adatok.txt","rw");
+            BufferedReader reader = new BufferedReader(new FileReader("src/gimesi_second/Second_zh/file_binary/F8_BinFile.java"));
+            RandomAccessFile file = new RandomAccessFile("Generated/Adatok.txt","rw");
             while ((sor = reader.readLine())!=null){
                 file.writeBytes(index +". sor: " + Integer.toString(karakterek(sor))+ '\n');
             }
@@ -25,7 +25,7 @@ public class F8_BinFile
 
         try{
             String sor2;
-            BufferedReader read = new BufferedReader(new FileReader("Adatok.txt"));
+            BufferedReader read = new BufferedReader(new FileReader("Generated/Adatok.txt"));
             while((sor2=read.readLine())!=null){
                 System.out.println(sor2);
             }

@@ -13,7 +13,7 @@ public class File_Random_3
         RandomAccessFile file = null;
         try
         { 
-            file = new RandomAccessFile("Teszt.txt", "rw");
+            file = new RandomAccessFile("Generated/Teszt.txt", "rw");
             file.setLength(0); out.print("Kérek egy számot: ");
             szám=bill.nextFloat(); while(szám != 0)
             { 
