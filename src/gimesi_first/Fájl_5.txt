@@ -1,0 +1,129 @@
+#include <stdio.h>
+#include <stdlib.h>
+void line(FILE*, char*);
+void beszamfajl()
+{
+	int a;
+	FILE *fp;
+	fp=fopen("teszt.txt","w");//Új fájl megnyitása, csak írás.
+	if(fp==NULL)
+	{//Nem sikerült a megnyitás
+		printf("fibás fájl\n");
+		system ("pause");
+		//return -1; 
+	} 
+	printf("kérek egy számot: ");scanf("%d",&a);
+	while(a)
+	{//Beolvasás 0 végjeligf
+		fprintf(fp,"%d",a);
+		printf("kérek egy számot: ");
+		scanf("%d",&a);
+	}
+	fprintf(fp,"\n",a);
+	fclose(fp);
+	fp=fopen("teszt.txt","r");//Meglévo fájl megnyitása, csak olvasás
+	fscanf(fp,"%d",&a);while(!feof(fp))
+	{//Olvasás a fájl végéig
+		printf("%d\n",a);fscanf(fp,"%d",&a);
+	} 
+	fclose(fp);
+} 
+
+void bechar_szam_line()
+{
+	char a[40];
+	FILE *fp;
+	fp=fopen("teszt.txt","w");
+	if(fp==NULL)
+	{
+		printf("hibás fájl\n");
+		system ("pause");
+		//return -1;
+	} 
+	printf("kérek egy szöveget: ");
+	while(scanf("%[^\n]",a))
+	{	//Olvasás üres sorig (csak enter).
+		fflush(stdin);
+		fprintf(fp,"%s\n",a);
+		printf("kérek egy számot: ");
+	}
+	fclose(fp);
+	fp=fopen("teszt.txt","r");   
+	line(fp, a);
+	while(!feof(fp))
+	{
+		printf("%s",a);
+		line(fp, a);
+	}
+	fclose(fp);
+}
+int be_tetszoleges()
+{
+	int a;
+	char sz[20];
+	FILE *fp;
+	fp=fopen("teszt.txt","a");
+	if(fp==NULL)
+	{
+		printf("hibás fájl\n");
+		system ("pause");
+		return -1;
+	} 
+	printf("kérek egy számot: ");scanf("%d",&a);
+	while(a)
+	{
+		fflush(stdin);//Billentyupuffer törlése
+		printf("kérek egy szöveget: ");scanf("%[^\n]",sz);
+		fprintf(fp,"%d - %s\n",a,sz);
+		printf("kérek egy számot: ");scanf("%d",&a);
+	} 
+	fclose(fp);
+	fp=fopen("teszt.txt","r"); fscanf(fp,"%d - %[^  \n]",&a,sz);
+	while(!feof(fp))
+	{
+		printf("%d : %s\n",a,sz);fscanf(fp,"%d - %[^  \n]",&a,sz);
+	} 
+	fclose(fp);
+}
+int linefuggvenyhasznalata()
+{
+	char a[80];  
+	FILE *in, *out;
+	in=fopen("Fájlok.cpp","r");
+	if(in==NULL)
+	{
+		printf("hibás fájl\n"); 
+		system ("pause");
+		return -1;
+	}  
+	out=fopen("Fájl_5.txt", "w");
+	if(out==NULL)
+	{
+		printf("megnyitási hiba\n"); 
+		system ("pause");
+		//return -1;
+	}  
+	line(in, a);
+	while(!feof(in))
+	{
+		fprintf(out,"%s",a);
+		line(in, a);
+	} 
+	fclose(in);
+	fclose(out);
+	system("pause");
+}
+int main()
+{
+	//setlocale(LC_ALL, "HUN");
+	//beszamfajl()
+	//bechar_szam_line();
+	//be_tetszoleges();
+	linefuggvenyhasznalata();
+}
+void line(FILE *f, char *p)
+{
+	while((*p = fgetc (f))!='\n' && *p != EOF)p++;
+	*p++='\n';
+	*p=' \0';  
+} 
