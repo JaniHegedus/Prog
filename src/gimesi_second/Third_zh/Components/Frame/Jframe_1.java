@@ -1,4 +1,4 @@
-package gimesi_second.Second_zh.Frame;
+package gimesi_second.Third_zh.Components.Frame;
 
 import javax.swing.JFrame;
 public class Jframe_1

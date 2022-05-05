@@ -1,4 +1,4 @@
-package gimesi_second.Second_zh.Components;
+package gimesi_second.Third_zh.Button;
 
 import java.awt.Color; import java.awt.Font; import java.awt.Graphics; import javax.swing.JFrame;
 public class Graphics_1

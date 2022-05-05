@@ -1,4 +1,4 @@
-package gimesi_second.Second_zh.Frame;
+package gimesi_second.Third_zh.Components.Frame;
 
 import java.awt.GridLayout;
 import static java.lang.System.out;

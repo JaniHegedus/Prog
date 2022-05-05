@@ -1,4 +1,4 @@
-package gimesi_second.Second_zh.Frame;
+package gimesi_second.Third_zh.Components.Frame;
 
 import java.awt.Dimension;
 import java.io.File;
@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.Scanner;
 import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
-import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JList;
 import javax.swing.JScrollPane;
 public class Jframe_4
