@@ -14,7 +14,7 @@ public class F1_BinFile
 {
     public static void main(String[] args) throws IOException
     {
-        String filename = "F1.bin";
+        String filename = "Generated/F1.bin";
         int counter=0;
         int szam;
         try

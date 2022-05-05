@@ -9,7 +9,7 @@ public class File_char_1
     { 
         try 
         { 
-            try (FileReader be = new FileReader("fájl.txt")) 
+            try (FileReader be = new FileReader("Generated/fájl.txt"))
             { 
                 int c; 
                 out.println(be.getEncoding());

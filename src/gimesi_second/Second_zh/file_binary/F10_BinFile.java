@@ -11,7 +11,7 @@ public class F10_BinFile
         System.out.println("Kérem a-t:");
         a = be.nextInt();
         try{
-            RandomAccessFile beolv = new RandomAccessFile("file.txt","rw");
+            RandomAccessFile beolv = new RandomAccessFile("Generated/file.txt","rw");
             while (a != 0) {
                 System.out.println("Kérem b-t:");
                 b = be.nextInt();
@@ -28,7 +28,7 @@ public class F10_BinFile
             System.out.println("SZAAAAR");
         }
         int random = 0;
-        BufferedReader beolv = new BufferedReader(new FileReader("file.txt"));
+        BufferedReader beolv = new BufferedReader(new FileReader("Generated/file.txt"));
         String sor;
         while ((sor = beolv.readLine()) != null){
             random++;

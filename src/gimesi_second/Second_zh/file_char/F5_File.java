@@ -16,7 +16,7 @@ public class F5_File
         Scanner be = new Scanner(System.in);
         try
         {
-            PrintWriter ki = new PrintWriter("Dikaz.txt");
+            PrintWriter ki = new PrintWriter("Generated/Dikaz.txt");
             boolean csoro = true;
             out.println("Sor szöveg:");
             String dik = be.nextLine();

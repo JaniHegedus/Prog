@@ -11,7 +11,7 @@ public class F9_BinFile
     public static void main(String[] args)
     {
         try{
-            RandomAccessFile file = new RandomAccessFile("Adatok.txt","rw");
+            RandomAccessFile file = new RandomAccessFile("Generated/Adatok.txt","rw");
             Scanner beker = new Scanner(System.in);
             System.out.println("Adja meg a szöveget!");
             String sor = beker.nextLine();

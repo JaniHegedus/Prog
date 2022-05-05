@@ -12,7 +12,7 @@ public class F1_File
     {
         //----------FILE WRITEING + CREATING
         try {
-            try (FileWriter myWriter = new FileWriter("filename.txt")) {
+            try (FileWriter myWriter = new FileWriter("Generated/filename.txt")) {
                 Scanner sc = new Scanner(System.in);
                 System.out.println("Adjon meg egy stringet: ");
                 String str = sc.next();
@@ -25,7 +25,7 @@ public class F1_File
             System.out.println("An error occurred.");
         }
 
-        File file = new File("filename.txt");
+        File file = new File("Generated/filename.txt");
 
 
         int c = read(file);
@@ -40,7 +40,7 @@ public class F1_File
 
         //----------FILE READING
         try {
-            File myObj = new File("filename.txt");
+            File myObj = new File("Generated/filename.txt");
             try (Scanner myReader = new Scanner(myObj)) {
 
                 while (myReader.hasNextLine()) {

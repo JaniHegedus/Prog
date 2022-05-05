@@ -11,7 +11,7 @@ public class F3_File
     public static void main(String[] args) {
 
         create();
-        File file = new File("filename.txt");
+        File file = new File("Generated/filename.txt");
 
         //----------FILE READING
         try {
@@ -33,7 +33,7 @@ public class F3_File
     public static void create()
     {
         try {
-            try (FileWriter myWriter = new FileWriter("filename.txt")) {
+            try (FileWriter myWriter = new FileWriter("Generated/filename.txt")) {
                 Scanner sc = new Scanner(System.in);
 
                 String str = "";

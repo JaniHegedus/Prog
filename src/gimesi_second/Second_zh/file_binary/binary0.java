@@ -9,8 +9,8 @@ public class binary0
 {
     public static void main(String[] args) throws IOException
     {
-        PrintStream ki = new PrintStream("Adatok.txt");
-        kiir(ki); Scanner be = new Scanner(new File("Adatok.txt"));
+        PrintStream ki = new PrintStream("Generated/Adatok.txt");
+        kiir(ki); Scanner be = new Scanner(new File("Generated/Adatok.txt"));
         out.println("A legnépesebb város: " + nagy(be)); 
     }
     private static void kiir(PrintStream f) 

@@ -8,7 +8,7 @@ import static java.lang.System.out;
 public class F7_File
 {
     public static void main(String[] args) throws IOException {
-        PrintWriter file = new PrintWriter("Téglatest.txt");
+        PrintWriter file = new PrintWriter("Generated/Téglatest.txt");
         Scanner be = new Scanner(System.in);
         int a=1,b=1,c=1;
         System.out.println("Adja meg az a oldalt!");

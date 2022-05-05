@@ -12,7 +12,7 @@ public class F8_File
 {
     public static void main(String[] args) throws FileNotFoundException
     {
-        String filename="Adatok.txt";
+        String filename="Generated/Adatok.txt";
         String sor;
         try
         {

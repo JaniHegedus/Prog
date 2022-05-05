@@ -18,7 +18,7 @@ public class File_OB
     }
     static void fájlírás(LinkedList<OB_def> adatok) throws IOException
     { 
-        try (PrintWriter file = new PrintWriter(new FileWriter("Adatok.txt"))) {
+        try (PrintWriter file = new PrintWriter(new FileWriter("Generated/Adatok.txt"))) {
             for(int i = 0; i < adatok.size(); i++)
             {
                 file.print(adatok.get(i).azon+";");
@@ -55,7 +55,7 @@ while(OB.azon!=0)
     }
     static void képernyő(LinkedList<OB_def> adatok)throws IOException
     {
-        try (BufferedReader file = new BufferedReader(new FileReader("Adatok.txt"))) 
+        try (BufferedReader file = new BufferedReader(new FileReader("Generated/Adatok.txt")))
         {
             String sor; StringTokenizer token;
             while((sor = file.readLine()) != null)

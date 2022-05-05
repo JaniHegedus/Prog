@@ -13,7 +13,7 @@ public class F9_File
         Scanner bill= new Scanner(System.in);
         String sor;
 
-        String filename="sorok.txt";
+        String filename="Generated/sorok.txt";
         PrintWriter newfile= new PrintWriter(new FileWriter(filename));
 
         out.println("Adja meg a sort: ");

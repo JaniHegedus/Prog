@@ -21,7 +21,7 @@ public class File_binary_2
         int szam; 
         try
         { 
-            FileOutputStream bki = new FileOutputStream("Teszt.bin");
+            FileOutputStream bki = new FileOutputStream("Generated/Teszt.bin");
             try (DataOutputStream ki = new DataOutputStream(bki)) {
                 do
                 {
@@ -44,10 +44,10 @@ public class File_binary_2
         }
     try
     {
-        FileInputStream bbe = new FileInputStream("Teszt.bin"); 
+        FileInputStream bbe = new FileInputStream("Generated/Teszt.bin");
             try 
             {
-                bbe = new FileInputStream("Teszt.bin");
+                bbe = new FileInputStream("Generated/Teszt.bin");
             } 
             catch (FileNotFoundException ex) 
             {

@@ -12,7 +12,7 @@ public class F4_BinFile
     public static void main(String[] args) throws IOException
     {
 
-        String filename = "F4.txt";
+        String filename = "Generated/F4.txt";
         int i=1;
         try
         {

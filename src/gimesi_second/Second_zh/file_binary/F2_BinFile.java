@@ -10,7 +10,7 @@ import static java.lang.System.out;
 public class F2_BinFile
 {
     public static void main(String[] args) throws FileNotFoundException {
-        String filename="F2.bin";
+        String filename="Generated/F2.bin";
         int szam=0;
         try
         {

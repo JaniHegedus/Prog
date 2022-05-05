@@ -14,7 +14,7 @@ public class F5_BinFile
         int index = 1;
         String sor ="";
         try{
-            FileOutputStream file = new FileOutputStream("Adatok.bin");
+            FileOutputStream file = new FileOutputStream("Generated/Adatok.bin");
             ObjectOutputStream data = new ObjectOutputStream(file);
             System.out.println("Adja meg a sort");
             sor = beker.nextLine();
@@ -29,7 +29,7 @@ public class F5_BinFile
             err.println("Hiba");
         }
         try{
-            FileInputStream file = new FileInputStream("Adatok.bin");
+            FileInputStream file = new FileInputStream("Generated/Adatok.bin");
             ObjectInputStream data = new ObjectInputStream(file);
             boolean bol = true;
             while (bol){
