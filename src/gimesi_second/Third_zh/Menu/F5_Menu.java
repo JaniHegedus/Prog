@@ -4,7 +4,13 @@ import javax.swing.*;
 import java.awt.*;
 
 public class F5_Menu {
+
+
+
     public static void main(String[] args) {
+
+
+
         // Menu
         JMenuBar mb;
         JMenu file = new JMenu("File");
@@ -78,5 +84,4 @@ public class F5_Menu {
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.add(panel);
-    }
-}
+    }}
