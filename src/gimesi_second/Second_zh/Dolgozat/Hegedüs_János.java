@@ -17,14 +17,13 @@ public class Hegedüs_János
     public static void main(String[] args) throws FileNotFoundException {
         Nyilvantartas ujnyilvantartas = new Nyilvantartas();
         ujnyilvantartas.beolvas();
-        ujnyilvantartas.kiír();
+        ujnyilvantartas.K_kiír();
     }
 
 }
 class Nyilvantartas
 {
-    protected ArrayList<String[]> nyilvantartas= new ArrayList();
-    protected String filename="Dolgozat.bin";
+    protected String filename="src/Generated/Dolgozat.bin";
     public void beolvas()
     {
         Scanner bill = new Scanner(System.in);
@@ -39,23 +38,22 @@ class Nyilvantartas
             out.print("Kérem az email címet: ");
             belso[2] = bill.nextLine();
             out.println();
+            kiír(belso);
             out.print("Kérem a nevet: ");
-            nyilvantartas.add(belso);
-            }
+        }
+    }
+    public void kiír(String[] data)
+    {
         try
         {
             FileOutputStream outputStream = new FileOutputStream(filename);
             try (DataOutputStream outputStream1 = new DataOutputStream(outputStream))
             {
-                for (int i = 0; i < nyilvantartas.size(); i++)
-                {
-                    for(String elem:nyilvantartas.get(i))
+                for(String data0:data)
                     {
-                        outputStream1.write(elem.getBytes(StandardCharsets.UTF_8));
-                        out.println(elem);
+                        outputStream1.write(data0.getBytes(StandardCharsets.UTF_8));
                     }
-                    outputStream1.write("\n".getBytes(StandardCharsets.UTF_8));
-                }
+                outputStream1.write("\n".getBytes(StandardCharsets.UTF_8));
                 out.println("A fileba írás megtörtént");
             }
         }
@@ -64,9 +62,9 @@ class Nyilvantartas
             err.println("Írási hiba - " + error.getMessage());
         }
     }
-    public void kiír() throws FileNotFoundException
+    public void K_kiír() throws FileNotFoundException
     {
-        int szam=0;
+        char szam;
         FileInputStream bbe = new FileInputStream(filename);
         DataInputStream be = new DataInputStream(bbe);
         boolean noteof = true;
@@ -75,7 +73,13 @@ class Nyilvantartas
         {
             try
             {
-                szam = be.readInt();
+                szam = be.readChar();
+                out.println(i+". " + szam);
+                i++;
+                szam = be.readChar();
+                out.println(i+". " + szam);
+                i++;
+                szam = be.readChar();
                 out.println(i+". " + szam);
                 i++;
             }

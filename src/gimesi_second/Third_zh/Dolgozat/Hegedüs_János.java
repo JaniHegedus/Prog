@@ -14,7 +14,8 @@ import static javax.swing.JOptionPane.showMessageDialog;
 public class Hegedüs_János extends JFrame
 {
     private static final JFileChooser fc = new JFileChooser();
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         library newLibrary = new library();
 
         JFrame frame = new JFrame("Dolgozat");
@@ -152,7 +153,7 @@ public class Hegedüs_János extends JFrame
 
         frame.add(panel);
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        panel.setBackground(new Color(55,202, 39));
+        panel.setBackground(new Color(231, 116, 9));
 
         frame.setJMenuBar(mb);
         frame.setVisible(true);
@@ -329,7 +330,8 @@ class library{
     }
     public void remove(int libnumber)
     {
-        if(contains(libnumber)){
+        if(contains(libnumber))
+        {
             for(library lib : libList)
             {
                 if(lib.getLibnumber()==libnumber)
