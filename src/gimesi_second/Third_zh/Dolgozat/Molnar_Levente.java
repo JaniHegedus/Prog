@@ -1,14 +1,13 @@
 package gimesi_second.Third_zh.Dolgozat;
 
 import javax.swing.*;
-import java.awt.*;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Array;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static javax.swing.JOptionPane.showInputDialog;
 
 public class Molnar_Levente
 {
@@ -128,5 +127,14 @@ public class Molnar_Levente
             JOptionPane.showMessageDialog(frame,"Nincs file.");
         }
         return filecontent;
+    }
+    public static void kiír(File file,library lib) throws IOException {
+        PrintWriter newfile = new PrintWriter(new FileWriter(file));
+        out(newfile,lib.show());
+        newfile.close();
+    }
+    public static void out(PrintWriter file,String  sor)
+    {
+        file.println(sor);
     }
 }
